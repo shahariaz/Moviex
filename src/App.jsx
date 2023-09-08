@@ -14,9 +14,9 @@ import Details from "./pages/Details/Details";
 
 function App() {
   const dispatch = useDispatch();
-  const { url } = useSelector((state) => {
-    return state.home;
-  });
+  // const { url } = useSelector((state) => {
+  //   return state.home;
+  // });
   useEffect(() => {
     fetchApiConfig();
   }, []);
@@ -42,7 +42,7 @@ function App() {
           <Route path="/explore/:mediaType" element={<Explore />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
-        <Footer />
+        {/* <Footer /> */}
       </BrowserRouter>
     </div>
   );
